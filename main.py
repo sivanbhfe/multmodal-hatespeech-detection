@@ -14,64 +14,32 @@ PACKAGE_ROOT = Path(os.path.abspath(os.path.dirname(__file__))).parent
 sys.path.append(str(PACKAGE_ROOT))
 
 # # Then perform import
-from prediction_model.config import config
-from prediction_model.processing.data_handling import load_pipeline
+# from prediction_model.config import config
+from multimodel_hatespeech_detection.extract_caption.extractcaption import extract_caption
+from multimodel_hatespeech_detection.proper_tamil_translation import tamil_normalizer
 
-classification_pipeline = load_pipeline(config.MODEL_NAME)
+# classification_pipeline = load_pipeline(config.MODEL_NAME)
 
 app = FastAPI()
 
-
-
 #Perform parsing
-class LoanPred(BaseModel):
-    Dependents: int
-    Education: str
-    Self_Employed: str
-    TotalIncome: int  # 'income_annum'
-    LoanAmount: int
-    Loan_Amount_Term: int  # 'loan_term'
-    Credit_History: int  # 'cibil_score'
-    Residential_Assets_Value: int
-    Commercial_Assets_Value: int
-    Luxury_Assets_Value: int
-    Bank_Asset_Value: int
-
+class image_path_details(BaseModel):
+    image_path_details: str
 
 @app.get('/')
 def index():
     return {'message': 'Welcome to Loan Prediction App'}
     
 # defining the function which will make the prediction using the data which the user inputs
-@app.post('/predict')
-def predict_loan_status(loan_details: LoanPred):
-	data = loan_details.model_dump()
-	new_data = {
-    'no_of_dependents': data['Dependents'],
-    'education': data['Education'],
-    'self_employed': data['Self_Employed'],
-    'income_annum': data['TotalIncome'],
-    'loan_amount': data['LoanAmount'],
-    'loan_term': data['Loan_Amount_Term'],
-    'cibil_score': data['Credit_History'],
-    'residential_assets_value': data['Residential_Assets_Value'],
-    'commercial_assets_value': data['Commercial_Assets_Value'],
-    'luxury_assets_value': data['Luxury_Assets_Value'],
-    'bank_asset_value': data['Bank_Asset_Value']
-	}
+@app.post('/detect')
+def extracted_caption(image_path: image_path_details):
+    imagepath =image_path.model_dump()
+    caption_text = extract_caption(imagepath["image_path_details"])
 
-# Create a DataFrame with a single row from the new_data dictionary
-	df = pd.DataFrame([new_data])
+    # caption_text = tamil_normalizer.transliterate_to_tamil(caption_text)
+    caption_text = tamil_normalizer.correct_tamil_spelling(caption_text)
 
-	# Making predictions
-	prediction = classification_pipeline.predict(df)
-
-	if prediction[0] == 0:
-		pred = 'Rejected'
-	else:
-		pred = 'Approved'
-
-	return {'Status of Loan Application':pred}
+    return ("Extracted caption:",caption_text)
 
 if __name__ == '__main__':
-	uvicorn.run("main:app", host="0.0.0.0",port=8005,reload=False)
+    uvicorn.run("main:app", host="0.0.0.0",port=8005,reload=False)
