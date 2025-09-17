@@ -17,4 +17,6 @@ open-tamil
 symspellpy
 indic-transliteration
 chardet
+PyPDF2
+pdf2image
 prometheus-fastapi-instrumentator==6.1.0

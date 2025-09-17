@@ -36,7 +36,7 @@ def extracted_caption(image_path: image_path_details):
     imagepath =image_path.model_dump()
     caption_text = extract_caption(imagepath["image_path_details"])
 
-    # caption_text = tamil_normalizer.transliterate_to_tamil(caption_text)
+    caption_text = tamil_normalizer.transliterate_to_tamil(caption_text)
     caption_text = tamil_normalizer.correct_tamil_spelling(caption_text)
 
     return ("Extracted caption:",caption_text)

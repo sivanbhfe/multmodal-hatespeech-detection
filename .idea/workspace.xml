@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45c75e04-03a6-4d10-bd90-bbde8c44bfd2" name="Changes" comment="base code, caption extraction, tamil transliteration+correction" />
+    <list default="true" id="45c75e04-03a6-4d10-bd90-bbde8c44bfd2" name="Changes" comment="base code, caption extraction, tamil transliteration+correction">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/multimodel_hatespeech_detection/tamil_corpus_building/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/multimodel_hatespeech_detection/tamil_corpus_building/corpus_building.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/multimodel_hatespeech_detection/tamil_corpus_building/transliterate_txtfile_content.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multimodel_hatespeech_detection/extract_caption/extractcaption.py" beforeDir="false" afterPath="$PROJECT_DIR$/multimodel_hatespeech_detection/extract_caption/extractcaption.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multimodel_hatespeech_detection/proper_tamil_translation/tamil_normalizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/multimodel_hatespeech_detection/proper_tamil_translation/tamil_normalizer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multimodel_hatespeech_detection/proper_tamil_translation/temp.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,10 +80,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.corpus_building.executor": "Run",
     "Python.extractcaption.executor": "Run",
     "Python.main.executor": "Run",
     "Python.tamil_normalizer.executor": "Run",
     "Python.temp.executor": "Run",
+    "Python.temp_1_pdfextraction.executor": "Run",
+    "Python.transliterate_txtfile_content.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
@@ -83,6 +97,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\AI_Doctorate\HateSpeechModel_Draft\MultimodelHateSpeechDetection" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\AI_Doctorate\HateSpeechModel_Draft\MultimodelHateSpeechDetection\multimodel_hatespeech_detection\tamil_corpus_building" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -141,7 +158,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758003049586</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="base code, caption extraction, tamil transliteration+correction">
+      <option name="closed" value="true" />
+      <created>1758003139858</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1758003139858</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
