@@ -16,7 +16,7 @@ def extract_caption(image_path: str, lang: str = "eng+tam") -> str:
     try:
         img = Image.open(image_path)
         caption_text = pytesseract.image_to_string(img, lang=lang)
-        print(caption_text)
+        print("Extracted caption:", caption_text)
         return caption_text.strip()
     except Exception as e:
         raise RuntimeError(f"Error extracting caption: {e}")

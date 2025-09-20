@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45c75e04-03a6-4d10-bd90-bbde8c44bfd2" name="Changes" comment="base code, caption extraction, tamil transliteration+correction">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/multimodel_hatespeech_detection/tamil_corpus_building/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/multimodel_hatespeech_detection/tamil_corpus_building/corpus_building.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/multimodel_hatespeech_detection/tamil_corpus_building/transliterate_txtfile_content.py" afterDir="false" />
+    <list default="true" id="45c75e04-03a6-4d10-bd90-bbde8c44bfd2" name="Changes" comment="caption extraction, transliteration and spell correction with minimum tamil corpus dictionary">
+      <change afterPath="$PROJECT_DIR$/multimodel_hatespeech_detection/image_preprocessing/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/multimodel_hatespeech_detection/image_preprocessing/caption_removal.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/multimodel_hatespeech_detection/extract_caption/extractcaption.py" beforeDir="false" afterPath="$PROJECT_DIR$/multimodel_hatespeech_detection/extract_caption/extractcaption.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multimodel_hatespeech_detection/proper_tamil_translation/tamil_normalizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/multimodel_hatespeech_detection/proper_tamil_translation/tamil_normalizer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multimodel_hatespeech_detection/proper_tamil_translation/temp.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +61,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/sivanbhfe/multmodal-hatespeech-detection.git&quot;,
+    &quot;url&quot;: &quot;git@github.com:sivanbhfe/multmodal-hatespeech-detection.git&quot;,
     &quot;accountId&quot;: &quot;82cda7e0-f633-4eb3-933e-efad8eec8960&quot;
   }
 }</component>
@@ -80,6 +76,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.caption_removal.executor": "Run",
     "Python.corpus_building.executor": "Run",
     "Python.extractcaption.executor": "Run",
     "Python.main.executor": "Run",
@@ -166,13 +163,33 @@
       <option name="project" value="LOCAL" />
       <updated>1758003139858</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="caption extraction, transliteration and spell correction with minimum tamil corpus dictionary">
+      <option name="closed" value="true" />
+      <created>1758084564836</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1758084564836</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="base code set up for multimodal hatespeech detection model" />
     <MESSAGE value="base code, caption extraction, tamil transliteration+correction" />
-    <option name="LAST_COMMIT_MESSAGE" value="base code, caption extraction, tamil transliteration+correction" />
+    <MESSAGE value="caption extraction, transliteration and spell correction with minimum tamil corpus dictionary" />
+    <option name="LAST_COMMIT_MESSAGE" value="caption extraction, transliteration and spell correction with minimum tamil corpus dictionary" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
